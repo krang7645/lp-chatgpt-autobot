@@ -1,11 +1,63 @@
 import './App.css'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 function App() {
   const formRef = useRef(null)
 
-  const handleScrollToForm = () => {
-    formRef.current?.scrollIntoView({ behavior: 'smooth' })
+  // スムーススクロール
+  useEffect(() => {
+    const handleAnchorClick = (e) => {
+      const href = e.target.getAttribute('href')
+      if (href && href.startsWith('#')) {
+        const target = document.querySelector(href)
+        if (target) {
+          e.preventDefault()
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', handleAnchorClick)
+    })
+    return () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.removeEventListener('click', handleAnchorClick)
+      })
+    }
+  }, [])
+
+  // アニメーション効果
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px',
+    }
+    const observer = new window.IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1'
+          entry.target.style.transform = 'translateY(0)'
+        }
+      })
+    }, observerOptions)
+    document.querySelectorAll('.benefit-card, .problem-item, .preview-card').forEach(el => {
+      el.style.opacity = '0'
+      el.style.transform = 'translateY(30px)'
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'
+      observer.observe(el)
+    })
+    return () => observer.disconnect()
+  }, [])
+
+  // フォーム送信
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const name = e.target.name.value
+    const email = e.target.email.value
+    if (name && email) {
+      window.alert('ご登録ありがとうございます！\n特典資料をメールでお送りいたします。')
+      e.target.reset()
+    }
   }
 
   return (
@@ -75,9 +127,9 @@ function App() {
       <section className="section-bg" ref={formRef}>
         <div className="card form-card">
           <h2>Get Your Free Templates</h2>
-          <form className="register-form" onSubmit={e => e.preventDefault()}>
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Email Address" required />
+          <form className="register-form" onSubmit={handleSubmit} autoComplete="off">
+            <input type="text" placeholder="Your Name" required id="name" name="name" />
+            <input type="email" placeholder="Email Address" required id="email" name="email" />
             <button className="cta-btn big" type="submit">Get Access</button>
           </form>
           <div className="line-invite">

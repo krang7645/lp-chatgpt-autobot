@@ -1,265 +1,316 @@
-body {
-  background: #f6f7fa;
-  font-family: 'Inter', 'Avenir', 'Helvetica Neue', Arial, sans-serif;
-}
-
-.lp-bg {
-  min-height: 100vh;
-  background: #f6f7fa;
-}
-
-.section-bg {
-  background: #fff;
-  padding: 64px 0 56px 0;
-}
-.section-bg-alt {
-  background: #f6f7fa;
-  padding: 64px 0 56px 0;
-}
-
-.card {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-  max-width: 600px;
-  margin: 0 auto 36px auto;
-  padding: 2.7rem 2.2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hero-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-.hero-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 56px;
-  max-width: 900px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-.hero-text {
-  flex: 1 1 320px;
-  min-width: 280px;
-}
-.hero-img {
-  flex: 1 1 200px;
-  min-width: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-img img {
-  width: 140px;
-  height: 140px;
-  object-fit: contain;
-  border-radius: 16px;
-  background: #f3f3f3;
-  border: 1px solid #e0e0e0;
-}
-.main-catch {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: #1a1a1a;
-  margin-bottom: 1.2rem;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-}
-.hero-lead {
-  font-size: 1.18rem;
-  color: #444;
-  margin-bottom: 2.2rem;
-  line-height: 1.6;
-}
-
-.cta-btn {
-  background: linear-gradient(90deg, #4f8cff 0%, #38e7b7 100%);
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  border-radius: 999px;
-  padding: 1em 2.5em;
-  font-size: 1.15rem;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(79,140,255,0.12);
-  transition: background 0.2s, transform 0.2s;
-  margin-top: 0.7em;
-  letter-spacing: 0.01em;
-}
-.cta-btn.big {
-  font-size: 1.28rem;
-  padding: 1.2em 3em;
-}
-.cta-btn:hover {
-  background: linear-gradient(90deg, #38e7b7 0%, #4f8cff 100%);
-  transform: translateY(-2px) scale(1.04);
-}
-
-/* Features / Benefits */
-.bonus-card {
-  margin-bottom: 0;
-}
-.bonus-grid {
-  display: flex;
-  gap: 36px;
-  margin-top: 1.7rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.bonus-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #f6f7fa;
-  border-radius: 12px;
-  padding: 1.3em 1.7em;
-  min-width: 130px;
-  box-shadow: 0 2px 8px rgba(79,140,255,0.06);
-}
-.bonus-icon {
-  font-size: 2.2rem;
-  margin-bottom: 0.5em;
-}
-
-/* Problems Solved */
-.problems-card {
-  margin-bottom: 0;
-}
-.problems-list {
-  list-style: none;
+* {
+  margin: 0;
   padding: 0;
-  margin: 1.3em 0 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8em;
-  font-size: 1.12rem;
-  color: #444;
+  box-sizing: border-box;
 }
 
-/* Sample / Preview */
-.sample-card {
-  margin-bottom: 0;
-}
-.sample-flex {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 1.3em;
-}
-.sample-img-large {
-  width: 140px;
-  height: 140px;
-  object-fit: contain;
-  border-radius: 12px;
-  background: #f3f3f3;
-  border: 1px solid #e0e0e0;
-}
-.sample-pdf {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.3em;
-  justify-content: center;
-}
-.pdf-link {
-  color: #4f8cff;
-  text-decoration: underline;
-  font-size: 1.08rem;
-  cursor: pointer;
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
 }
 
-/* Registration Form */
-.form-card {
-  margin-bottom: 0;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-.register-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.3rem;
-  margin-bottom: 1.3rem;
-  width: 100%;
-  max-width: 340px;
-  align-items: center;
-}
-.register-form input {
-  padding: 1em 1.1em;
-  border: 1px solid #d0d7e7;
-  border-radius: 8px;
-  font-size: 1.12rem;
-  background: #fff;
-  outline: none;
-  transition: border 0.2s;
-  width: 100%;
-}
-.register-form input:focus {
-  border: 1.5px solid #4f8cff;
-}
-.line-invite {
+
+/* ヒーローセクション */
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 0;
   text-align: center;
-  margin-top: 0.8rem;
+  position: relative;
+  overflow: hidden;
 }
-.line-invite span {
-  color: #aaa;
-  font-size: 1rem;
-  margin-right: 0.5em;
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+  opacity: 0.3;
 }
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero .subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.free-badge {
+  display: inline-block;
+  background: #ff6b6b;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* 特典説明セクション */
+.benefits {
+  padding: 80px 0;
+  background: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.benefit-card {
+  background: #f8f9fa;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.benefit-card p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* 悩み解決セクション */
+.problems {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.problems-list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.problem-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 1.3rem;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.check-icon {
+  color: #4caf50;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+/* CTAボタン */
+.cta-section {
+  padding: 60px 0;
+  background: white;
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 20px 50px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+  transition: all 0.3s ease;
+  margin: 20px 0;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255,107,107,0.6);
+}
+
+/* 実績セクション */
+.showcase {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.preview-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.preview-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.preview-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* フォームセクション */
+.form-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.1);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  background: rgba(255,255,255,0.9);
+}
+
+.submit-btn {
+  width: 100%;
+  background: #ff6b6b;
+  color: white;
+  padding: 18px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #ee5a24;
+}
+
+.line-option {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
 .line-btn {
   display: inline-block;
-  background: #06c755;
-  color: #fff;
-  border-radius: 999px;
-  padding: 0.8em 1.8em;
-  font-weight: bold;
-  font-size: 1.12rem;
+  background: #00c851;
+  color: white;
+  padding: 15px 30px;
   text-decoration: none;
-  margin-left: 0.5em;
-  transition: background 0.2s, transform 0.2s;
-}
-.line-btn:hover {
-  background: #00b900;
-  transform: translateY(-1px) scale(1.04);
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
-/* Footer */
-.footer-bg {
-  background: #eceff3;
-  padding: 36px 0 20px 0;
-  margin-top: 36px;
-}
-.footer-inner {
-  text-align: center;
-  color: #888;
-  font-size: 1rem;
-}
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
 
-@media (max-width: 900px) {
-  .hero-inner {
-    flex-direction: column;
-    gap: 28px;
+  .hero .subtitle {
+    font-size: 1.2rem;
   }
-}
-@media (max-width: 600px) {
-  .card {
-    padding: 1.3rem 0.8rem;
+
+  .section-title {
+    font-size: 2rem;
   }
-  .hero-section {
-    padding-top: 36px;
-    padding-bottom: 36px;
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
-  .section-bg, .section-bg-alt {
-    padding: 36px 0 26px 0;
+
+  .problem-item {
+    font-size: 1.1rem;
   }
-  .sample-flex {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-  .bonus-grid {
-    gap: 14px;
+
+  .cta-button {
+    padding: 18px 40px;
+    font-size: 1.2rem;
   }
 }

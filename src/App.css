@@ -1,5 +1,6 @@
 body {
   background: #f6f7fa;
+  font-family: 'Inter', 'Avenir', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .lp-bg {
@@ -9,11 +10,11 @@ body {
 
 .section-bg {
   background: #fff;
-  padding: 56px 0 48px 0;
+  padding: 64px 0 56px 0;
 }
 .section-bg-alt {
   background: #f6f7fa;
-  padding: 56px 0 48px 0;
+  padding: 64px 0 56px 0;
 }
 
 .card {
@@ -21,22 +22,22 @@ body {
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.07);
   max-width: 600px;
-  margin: 0 auto 32px auto;
-  padding: 2.5rem 2rem;
+  margin: 0 auto 36px auto;
+  padding: 2.7rem 2.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .hero-section {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .hero-inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 48px;
+  gap: 56px;
   max-width: 900px;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -53,24 +54,26 @@ body {
   justify-content: center;
 }
 .hero-img img {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
   border-radius: 16px;
   background: #f3f3f3;
   border: 1px solid #e0e0e0;
 }
 .main-catch {
-  font-size: 2.3rem;
-  font-weight: 800;
-  color: #222;
-  margin-bottom: 1.1rem;
-  line-height: 1.2;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin-bottom: 1.2rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
 .hero-lead {
-  font-size: 1.15rem;
-  color: #555;
-  margin-bottom: 2rem;
+  font-size: 1.18rem;
+  color: #444;
+  margin-bottom: 2.2rem;
+  line-height: 1.6;
 }
 
 .cta-btn {
@@ -79,30 +82,31 @@ body {
   font-weight: bold;
   border: none;
   border-radius: 999px;
-  padding: 0.9em 2.2em;
-  font-size: 1.1rem;
+  padding: 1em 2.5em;
+  font-size: 1.15rem;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(79,140,255,0.12);
   transition: background 0.2s, transform 0.2s;
-  margin-top: 0.5em;
+  margin-top: 0.7em;
+  letter-spacing: 0.01em;
 }
 .cta-btn.big {
-  font-size: 1.25rem;
-  padding: 1.1em 2.8em;
+  font-size: 1.28rem;
+  padding: 1.2em 3em;
 }
 .cta-btn:hover {
   background: linear-gradient(90deg, #38e7b7 0%, #4f8cff 100%);
-  transform: translateY(-2px) scale(1.03);
+  transform: translateY(-2px) scale(1.04);
 }
 
-/* 特典・メリット */
+/* Features / Benefits */
 .bonus-card {
   margin-bottom: 0;
 }
 .bonus-grid {
   display: flex;
-  gap: 32px;
-  margin-top: 1.5rem;
+  gap: 36px;
+  margin-top: 1.7rem;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -112,45 +116,45 @@ body {
   align-items: center;
   background: #f6f7fa;
   border-radius: 12px;
-  padding: 1.2em 1.5em;
-  min-width: 120px;
+  padding: 1.3em 1.7em;
+  min-width: 130px;
   box-shadow: 0 2px 8px rgba(79,140,255,0.06);
 }
 .bonus-icon {
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   margin-bottom: 0.5em;
 }
 
-/* 悩み・解決 */
+/* Problems Solved */
 .problems-card {
   margin-bottom: 0;
 }
 .problems-list {
   list-style: none;
   padding: 0;
-  margin: 1.2em 0 0 0;
+  margin: 1.3em 0 0 0;
   display: flex;
   flex-direction: column;
-  gap: 0.7em;
-  font-size: 1.08rem;
+  gap: 0.8em;
+  font-size: 1.12rem;
   color: #444;
 }
 
-/* 実績・サンプル */
+/* Sample / Preview */
 .sample-card {
   margin-bottom: 0;
 }
 .sample-flex {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 36px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 1.2em;
+  margin-top: 1.3em;
 }
 .sample-img-large {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
   border-radius: 12px;
   background: #f3f3f3;
@@ -166,28 +170,28 @@ body {
 .pdf-link {
   color: #4f8cff;
   text-decoration: underline;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   cursor: pointer;
 }
 
-/* 登録フォーム */
+/* Registration Form */
 .form-card {
   margin-bottom: 0;
 }
 .register-form {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  margin-bottom: 1.2rem;
+  gap: 1.3rem;
+  margin-bottom: 1.3rem;
   width: 100%;
   max-width: 340px;
   align-items: center;
 }
 .register-form input {
-  padding: 0.9em 1em;
+  padding: 1em 1.1em;
   border: 1px solid #d0d7e7;
   border-radius: 8px;
-  font-size: 1.08rem;
+  font-size: 1.12rem;
   background: #fff;
   outline: none;
   transition: border 0.2s;
@@ -198,11 +202,11 @@ body {
 }
 .line-invite {
   text-align: center;
-  margin-top: 0.7rem;
+  margin-top: 0.8rem;
 }
 .line-invite span {
   color: #aaa;
-  font-size: 0.98rem;
+  font-size: 1rem;
   margin-right: 0.5em;
 }
 .line-btn {
@@ -210,52 +214,52 @@ body {
   background: #06c755;
   color: #fff;
   border-radius: 999px;
-  padding: 0.7em 1.7em;
+  padding: 0.8em 1.8em;
   font-weight: bold;
-  font-size: 1.08rem;
+  font-size: 1.12rem;
   text-decoration: none;
   margin-left: 0.5em;
   transition: background 0.2s, transform 0.2s;
 }
 .line-btn:hover {
   background: #00b900;
-  transform: translateY(-1px) scale(1.03);
+  transform: translateY(-1px) scale(1.04);
 }
 
-/* フッター */
+/* Footer */
 .footer-bg {
   background: #eceff3;
-  padding: 32px 0 18px 0;
-  margin-top: 32px;
+  padding: 36px 0 20px 0;
+  margin-top: 36px;
 }
 .footer-inner {
   text-align: center;
   color: #888;
-  font-size: 0.98rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 900px) {
   .hero-inner {
     flex-direction: column;
-    gap: 24px;
+    gap: 28px;
   }
 }
 @media (max-width: 600px) {
   .card {
-    padding: 1.2rem 0.7rem;
+    padding: 1.3rem 0.8rem;
   }
   .hero-section {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
   .section-bg, .section-bg-alt {
-    padding: 32px 0 24px 0;
+    padding: 36px 0 26px 0;
   }
   .sample-flex {
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 0.8rem;
   }
   .bonus-grid {
-    gap: 12px;
+    gap: 14px;
   }
 }
